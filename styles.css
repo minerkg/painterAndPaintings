@@ -1,0 +1,116 @@
+
+div.collection {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: relative;
+}
+
+div.descriere, span.name {
+    display: none;
+}
+div.img:hover ~ .descriere {
+    display:flex;
+}
+
+
+div.picture-details:hover {
+    display: block;
+}
+
+img {
+    width: 400px;
+}
+
+div.picture-details {
+    position: relative;
+}
+
+
+
+div.descriere {
+    position: absolute;
+    top: 4%;
+    background-color: gray;
+    opacity: 0.8;
+    color: antiquewhite;
+    width: 400px;
+}
+
+div.img {
+    display: flex;
+    align-items: flex-start;
+    width: fit-content;
+}
+
+
+
+span.year {
+    position:absolute;
+    top: 0%;
+    right: 0%;
+    flex:content;
+    background-color: red;
+    color: antiquewhite;
+}
+
+span.year:hover ~ span.name {
+    display: flex;
+}
+
+
+span.name {
+
+    border-left: 2px dashed;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+
+
+
+@media screen and (max-width: 900px){
+    div.collection {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    div.picture-details {
+        border-style: double;
+    }
+
+    span.name {
+        display: flex;
+    }
+    
+}
+
+@media screen and (max-width: 450px){
+    div.picture-details {
+        border-style: none;
+
+    }
+    div.picture-details:hover {
+        box-shadow: 10px 10px;
+    }
+    div.collection {
+        display: flex;
+        flex-flow: column;
+    }
+    div.descriere {
+        display: flex;
+        position:unset;
+        top: -4%;
+    }
+    span.year {
+        position:unset;
+
+    }
+    span.name {
+        display: flex;
+    }
+
+
+
+}
